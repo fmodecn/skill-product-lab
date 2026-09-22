@@ -1,36 +1,43 @@
-# fmode-product-lab
+# skill-product-lab
 
 **健康快消/食品新品研发方案生成器**
 
-输入一句话产品需求 → 5视图推理分析（市场/用户/供应链/工艺/法规）→ 推荐产品概念 → AI生成产品图 → HTML长页方案。
+输入一句话产品需求 → 8大方法论分析（VOC/KANO/市场份额/价格带/竞争/定位/错位竞争）+ 5视图推理（市场/用户/供应链/工艺/法规）→ 推荐产品概念 → AI生成概念图 → HTML全案长页。
 
 ## 快速开始
 
 ```bash
 # 安装
-npm install -g fmode-product-lab
+npm install -g skill-product-lab
 
 # 完整流程：分析 + 出方案
-npx fmode-product-lab --task "设计一款面向25-35岁白领的抗氧化软糖，含胶原蛋白肽和维生素C，电商渠道"
+npx skill-product-lab --task "设计一款面向25-35岁白领的抗氧化软糖，含胶原蛋白肽和维生素C，电商渠道"
 
 # 指定输出
-npx fmode-product-lab --task "益生菌固体饮料，儿童肠道健康" --output /path/to/plan.html
+npx skill-product-lab --task "益生菌固体饮料，儿童肠道健康" --output /path/to/plan.html
 ```
 
-## 与 fmode-image 联动生成产品图
+## 安装为 Claude Code 技能
+
+```bash
+npx skill-product-lab@latest workspace   # 写入 ./.claude/skills/skill-product-lab/
+npx skill-product-lab@latest install     # 写入 ~/.claude/skills/skill-product-lab/
+```
+
+## 与 skill-image 联动生成产品图
 
 ```bash
 # 生成产品设计图（多角度/包装/概念）
-npx fmode-image --product "光感胶原果冻包装设计，主视图+3/4视角，纯白背景，磨砂玻璃质感渲染" gummy-pack
+npx skill-image --product "光感胶原果冻包装设计，主视图+3/4视角，纯白背景，磨砂玻璃质感渲染" gummy-pack
 
 # 生成产品爆炸图（成分/配方结构）
-npx fmode-image --explode "光感胶原果冻成分爆炸图：胶原蛋白肽/维生素C/低聚果糖逐层分解，标注营养数据流向" gummy-explode
+npx skill-image --explode "光感胶原果冻成分爆炸图：胶原蛋白肽/维生素C/低聚果糖逐层分解，标注营养数据流向" gummy-explode
 
 # 生成场景插图（用户使用场景）
-npx fmode-image --scene "25-35岁白领办公桌上摆放胶原果冻，环境明亮清新，人物轻松愉悦" gummy-scene
+npx skill-image --scene "25-35岁白领办公桌上摆放胶原果冻，环境明亮清新，人物轻松愉悦" gummy-scene
 
 # 生成产品详情页界面
-npx fmode-image --app "光感胶原果冻品牌详情页：产品主图+成分表+功效说明+规格价格" gummy-app
+npx skill-image --app "光感胶原果冻品牌详情页：产品主图+成分表+功效说明+规格价格" gummy-app
 ```
 
 ## 五个分析视图
@@ -54,17 +61,21 @@ npx fmode-image --app "光感胶原果冻品牌详情页：产品主图+成分�
 ## ESM 独立调用
 
 ```js
-import { analyze } from 'fmode-product-lab';
+import { analyze, renderHTML } from 'skill-product-lab';
+
 const result = analyze('代餐奶昔，高蛋白，运动人群，便利店+线上');
 console.log(result.recommendation.name);
+
+// result: { raw, voc, marketShare, priceBand, competition, reposition, categoryPos, views, recommendation }
+const html = renderHTML(result);   // 完整 HTML 全案长页
 ```
 
 ## 环境变量
 
-- `FMODE_API_KEY` — 必设（生成图片时）
+- `FMODE_API_KEY` — 必设（生成图片时）；亦可回落 `ANTHROPIC_AUTH_TOKEN`
 - `SKILL_IMAGE_OUTPUT` — 图片输出目录
 
 ## 链接
-- GitHub: https://github.com/fmodecn/fmode-product-lab
-- npm: https://www.npmjs.com/package/fmode-product-lab
-- 关联: [fmode-image](https://github.com/fmodecn/fmode-image)
+- GitHub: https://github.com/fmodecn/skill-product-lab
+- npm: https://www.npmjs.com/package/skill-product-lab
+- 关联: [skill-image](https://github.com/fmodecn/skill-image)

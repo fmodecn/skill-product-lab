@@ -1,3 +1,9 @@
 output/
+outputs/
 *.png
 node_modules/
+*.tgz
+.env
+.env.*
+.fmode/
+.DS_Store

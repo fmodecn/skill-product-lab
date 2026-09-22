@@ -1,21 +1,34 @@
 {
-  "name": "fmode-product-lab",
-  "version": "0.2.0",
-  "description": "健康快消/食品新品研发全案生成器。VOC+KANO+市场份额+价格带+竞争+定位+错位竞争+5视图+AI生图+HTML方案。",
+  "name": "skill-product-lab",
+  "version": "0.2.1",
+  "description": "Claude Code skill + CLI: 健康快消/食品新品研发全案生成器。VOC+KANO+市场份额+价格带+竞争+定位+错位竞争+5视图+AI生图+HTML方案。",
   "type": "module",
-  "main": "./lib/main.mjs",
+  "main": "./lib/skill-product-lab.mjs",
+  "exports": {
+    ".": {
+      "import": "./lib/skill-product-lab.mjs",
+      "default": "./lib/skill-product-lab.mjs"
+    }
+  },
   "bin": {
-    "fmode-product-lab": "./bin/product-lab.mjs"
+    "skill-product-lab": "./bin/skill-product-lab.mjs"
+  },
+  "scripts": {
+    "smoke": "node scripts/smoke.js"
   },
   "files": [
+    ".claude-plugin/",
     "lib/",
     "bin/",
     "scripts/",
     "skills/",
     "README.md",
-    "LICENSE"
+    "LICENSE",
+    "skill-package-manifest.json"
   ],
   "keywords": [
+    "claude-code",
+    "claude-skill",
     "fmode",
     "product",
     "innovation",
@@ -28,7 +41,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fmodecn/fmode-product-lab.git"
+    "url": "git+https://github.com/fmodecn/skill-product-lab.git"
+  },
+  "homepage": "https://github.com/fmodecn/skill-product-lab#readme",
+  "bugs": {
+    "url": "https://github.com/fmodecn/skill-product-lab/issues"
   },
   "engines": {
     "node": ">=18"

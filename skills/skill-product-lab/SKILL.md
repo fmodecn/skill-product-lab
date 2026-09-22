@@ -1,13 +1,13 @@
 ---
-name: fmode-product-lab
+name: skill-product-lab
 description: "触发词:新品研发、产品创新、产品开发、健康快消产品。VOC+KANO+市场+价格带+竞争+定位+错位竞争+5视图分析+AI生图+HTML全案。"
-version: 0.2.0
+version: 0.2.1
 author: FmodeAgent (Yuyang Liu)
 license: MIT
 platforms: [linux, macos, windows]
 ---
 
-# fmode-product-lab v0.2 | 新品研发 Lab
+# skill-product-lab v0.2.1 | 新品研发 Lab
 
 > **消费品/食品新品研发全案生成器**
 > 输入一段产品需求 → 8大方法论分析（VOC/KANO/市场/价格带/竞争/定位/错位竞争/5视图）→ 产品概念 → AI生成4类概念图 → HTML全案长页。
@@ -16,8 +16,8 @@ platforms: [linux, macos, windows]
 
 ```bash
 # 全案分析
-npx fmode-product-lab --task "面向25-35岁白领的抗氧化胶原蛋白软糖，含VC，电商渠道"
-npx fmode-product-lab --task "儿童益生菌固体饮料，母婴渠道" --output plan.html
+npx skill-product-lab --task "面向25-35岁白领的抗氧化胶原蛋白软糖，含VC，电商渠道"
+npx skill-product-lab --task "儿童益生菌固体饮料，母婴渠道" --output plan.html
 ```
 
 ## 8大方法论板块
@@ -108,7 +108,7 @@ L1 一级大类 → L2 功能赛道 → L3 渠道监管线(跨境HG/大贸CD/保
 ## 组件式调用
 
 ```js
-import { analyze, renderHTML } from 'fmode-product-lab';
+import { analyze, renderHTML } from 'skill-product-lab';
 const result = analyze('代餐奶昔，高蛋白，运动人群');
 // result: { voc, marketShare, priceBand, competition, reposition, categoryPos, views, recommendation }
 const html = renderHTML(result);
@@ -121,8 +121,9 @@ const html = renderHTML(result);
 ## 版本
 - **v0.1.0**：基础5视图方案
 - **v0.2.0**：全案升级——VOC+KANO+市场份额+价格带+竞争+定位+错位竞争+产品概念图
+- **v0.2.1**：更名 `fmode-product-lab` → `skill-product-lab`；`analyze`/`renderHTML` 正式导出（此前文档承诺但未导出）；补齐 skills/、manifest、plugin.json 结构
 
 ## 链接
-- GitHub: https://github.com/fmodecn/fmode-product-lab
-- npm: https://www.npmjs.com/package/fmode-product-lab
-- 关联: fmode-image（图片生成）、fmode-cdn-deploy（部署）、task-dispatch（委派）
+- GitHub: https://github.com/fmodecn/skill-product-lab
+- npm: https://www.npmjs.com/package/skill-product-lab
+- 关联: skill-image（图片生成）、skill-cdn-deploy（部署）、skill-task-dispatch（委派）
