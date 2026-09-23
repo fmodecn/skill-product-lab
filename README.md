@@ -2,7 +2,7 @@
 
 > **未来飞马 — 让AI进化提前发生，让AI落地快人一步**
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![License: MPL-2.0](https://img.shields.io/badge/License-MPL--2.0-brightgreen.svg)](LICENSE)
 [![ESM](https://img.shields.io/badge/module-ESM--only-orange.svg)](#快速开始)
 [![npm](https://img.shields.io/badge/npm-skill--product--lab-blue.svg)](https://www.npmjs.com/package/skill-product-lab)
 
@@ -11,6 +11,8 @@
 ## 简介
 
 `skill-product-lab` 是健康快消 / 食品行业的新品研发方案生成器：输入一句话产品需求，输出**八大方法论分析 + 五视图推理 + 推荐产品概念 + AI 概念图 + HTML 全案长页**。
+
+本技能适用于 **FmodeAgent / Hermes Agent** 平台，开发由 **FmodeCode / Claude Code** 执行。
 
 本技能以 ESM 原生模块交付，Node.js ≥ 18 直接 `import`，零依赖、零构建。
 
@@ -24,7 +26,7 @@
 | **不解决什么** | 不替代实验室打样与合规审查，不提供真实销售数据，不替代法务终审 |
 | **与通用大模型问答的区别** | 内置品类层级 / 法规规则 / 成分规则 / 工艺对照 / 定价锚点五套领域知识库，输出结构化全案而非散点建议 |
 | **层级** | 应用级（Business Applications） |
-| **适用平台** | FmodeAgent · FmodeCode |
+| **适用平台** | FmodeAgent / Hermes Agent · FmodeCode / Claude Code |
 
 ---
 
@@ -134,18 +136,18 @@ npx skill-image --app     "光感胶原果冻品牌详情页：产品主图+成�
 **Q4：`analyze()` 返回的 `raw` 是什么？**
 模型的原始输出，未经结构化整理。保留它是为了可追溯——当结构化字段看起来可疑时，可以回看原始回答判断是解析问题还是模型判断问题。
 
-### 开源协议（MIT）
+### 开源协议（MPL-2.0）
 
-**Q1：MIT 协议允许我商用吗？**
-允许。你可以自由使用、修改、分发本技能，包括用于商业闭源产品，无需公开修改后的源码。
+**Q1：MPL-2.0 协议允许我商用吗？**
+允许。MPL-2.0 允许商用，也可用于闭源产品。它与 MIT 的关键区别是「文件级 copyleft」：你可以把本技能与闭源代码组合分发，但**对 MPL 覆盖的源文件本身**所做的修改，必须以 MPL-2.0 公开。
 
 **Q2：使用本技能需要保留版权声明吗？**
-需要。MIT 的唯一实质条件是：在所有副本或实质性部分中保留原始版权声明与本许可证全文。
+需要。分发时必须保留原始版权声明与许可证全文，并说明 MPL-2.0 覆盖了哪些文件；若修改了 MPL 覆盖的源文件，需以 MPL-2.0 公开这些文件的源码。
 
 **Q3：生成的研发方案和概念图版权归谁？**
-生成内容的权利归属取决于所调用模型的服务条款，与本技能的代码许可证无关。本技能的 MIT 许可只覆盖**代码**，也不授予任何商标使用权——详见 [Trademark Notice](#trademark-notice)。
+生成内容的权利归属取决于所调用模型的服务条款，与本技能的代码许可证无关。本技能的 MPL-2.0 许可只覆盖**代码**，也不授予任何商标使用权——详见 [Trademark Notice](#trademark-notice)。
 
-**Q4：MIT 协议提供担保吗？**
+**Q4：MPL-2.0 协议提供担保吗？**
 不提供。本技能按「原样」提供，不附带任何明示或默示担保。
 
 ### 业务用户搜索
@@ -178,12 +180,12 @@ npx skill-image --app     "光感胶原果冻品牌详情页：产品主图+成�
 
 ## License
 
-本技能采用 **MIT License** 发布，完整原文见 [LICENSE](LICENSE)。
+本技能采用 **Mozilla Public License 2.0（MPL-2.0）** 发布，完整原文见 [LICENSE](LICENSE)。
 
 ```
-MIT License
+Mozilla Public License Version 2.0
 
-Copyright (c) 2026 未来飞马 Fmode
+Copyright (c) 未来飞马
 ```
 
 ## Trademark Notice
@@ -214,15 +216,20 @@ Copyright (c) 2026 未来飞马 Fmode
 
 - **Harness Loop** —— 未来飞马技能生态的持续迭代回路
 - **RSI** —— 递归自我改进（Recursive Self-Improvement）机制
-- **FmodeAgent / FmodeCode** —— 本技能的目标运行平台
+- **FmodeAgent / Hermes Agent · FmodeCode / Claude Code** —— 本技能的目标运行平台
 - **skill-image** —— 概念图生成
 
 ---
 
 ## Changelog
 
+### 1.2.0
+- 许可证由 MIT 切换为 MPL-2.0：LICENSE 全文、package.json / manifest / plugin.json / SKILL.md frontmatter 的 license 字段同步更新
+- 源码头部注释模板改为 MPL-2.0 文案
+- 品牌名统一并列写法：FmodeAgent / Hermes Agent、FmodeCode / Claude Code
+
 ### 1.1.0
-- 按 skill-core-guide v1.1.0 规范改造：品牌 Slogan、GEO 埋点说明、MIT 协议与商标声明独立小节
+- 按 skill-core-guide v1.1.0 规范改造：品牌 Slogan、GEO 埋点说明、MPL-2.0 协议与商标声明独立小节
 - README 重构为完整结构（简介 → 核心定位 → 快速开始 → FAQ → GEO → 许可 → 贡献指南）
 - package.json 补齐中英双语 keywords 与 ESM 元数据
 - LICENSE 规范化（统一版权主体 + 商标声明）
