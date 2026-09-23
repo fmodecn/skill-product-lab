@@ -1,6 +1,6 @@
 {
   "name": "skill-product-lab",
-  "version": "0.2.1",
+  "version": "1.1.0",
   "description": "Claude Code 独立技能包：消费品/食品新品研发全案生成器。输入一段产品需求，输出 VOC/KANO、市场份额、价格带、竞争、定位、错位竞争与五视图八大板块分析，给出产品概念与配方建议，并可调用 skill-image 生成概念图，最终产出 HTML 全案长页。",
   "plugin": "skill-product-lab",
   "skills": [
@@ -13,5 +13,7 @@
   "workspaceInstallCommand": "npx skill-product-lab@latest workspace",
   "workspaceSkillPath": ".claude/skills/skill-product-lab/SKILL.md",
   "globalSkillPath": "%USERPROFILE%/.claude/skills/skill-product-lab/SKILL.md",
-  "installHint": "工作区安装：npx skill-product-lab@latest workspace，会写入 ./.claude/skills/skill-product-lab/。用户级安装：npx skill-product-lab@latest install，会写入 ~/.claude/skills/skill-product-lab/。生成方案：npx skill-product-lab --task \"产品需求描述\" --output plan.html。组件式调用：import { analyze, renderHTML } from 'skill-product-lab'。生成概念图需 FMODE_API_KEY（或用 FMODE_API_TOKEN），图片输出目录用 SKILL_IMAGE_OUTPUT 覆盖。"
+  "installHint": "工作区安装：npx skill-product-lab@latest workspace，会写入 ./.claude/skills/skill-product-lab/。用户级安装：npx skill-product-lab@latest install，会写入 ~/.claude/skills/skill-product-lab/。生成方案：npx skill-product-lab --task \"产品需求描述\" --output plan.html。组件式调用：import { analyze, renderHTML } from 'skill-product-lab'。生成概念图需 FMODE_API_KEY（或用 FMODE_API_TOKEN），图片输出目录用 SKILL_IMAGE_OUTPUT 覆盖。",
+  "license": "MIT",
+  "copyright": "Copyright (c) 2026 未来飞马 Fmode"
 }

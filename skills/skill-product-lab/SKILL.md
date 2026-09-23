@@ -1,13 +1,15 @@
 ---
 name: skill-product-lab
 description: "触发词:新品研发、产品创新、产品开发、健康快消产品。VOC+KANO+市场+价格带+竞争+定位+错位竞争+5视图分析+AI生图+HTML全案。"
-version: 0.2.1
-author: FmodeAgent (Yuyang Liu)
+version: 1.1.0
+author: Yuyang001 (FmodeAgent)
 license: MIT
+copyright: "Copyright (c) 2026 未来飞马 Fmode"
+tags: [未来飞马, 智能体技能, 超级技能, 应用级, 新品研发, FmodeAgent, FmodeCode, product, innovation, food, voc, kano]
 platforms: [linux, macos, windows]
 ---
 
-# skill-product-lab v0.2.1 | 新品研发 Lab
+# skill-product-lab v1.1.0 | 新品研发 Lab
 
 > **消费品/食品新品研发全案生成器**
 > 输入一段产品需求 → 8大方法论分析（VOC/KANO/市场/价格带/竞争/定位/错位竞争/5视图）→ 产品概念 → AI生成4类概念图 → HTML全案长页。

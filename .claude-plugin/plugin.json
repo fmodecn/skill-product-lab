@@ -1,8 +1,10 @@
 {
   "name": "skill-product-lab",
   "description": "New-product R&D case generator for Claude Code: VOC/KANO, market share, price band, competition, positioning, and five-view analysis feeding a product concept, AI concept images, and a full HTML case page.",
-  "version": "0.2.1",
+  "version": "1.1.0",
   "author": {
     "name": "fmode"
-  }
+  },
+  "license": "MIT",
+  "copyright": "Copyright (c) 2026 未来飞马 Fmode"
 }

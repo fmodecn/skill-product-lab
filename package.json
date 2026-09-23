@@ -1,7 +1,7 @@
 {
   "name": "skill-product-lab",
-  "version": "0.2.1",
-  "description": "Claude Code skill + CLI: 健康快消/食品新品研发全案生成器。VOC+KANO+市场份额+价格带+竞争+定位+错位竞争+5视图+AI生图+HTML方案。",
+  "version": "1.1.0",
+  "description": "健康快消/食品新品研发全案生成器。输入一句话需求，输出 VOC/KANO、市场份额、价格带、竞争、定位、错位竞争与五视图分析，给出产品概念与配方建议，并可生成概念图与 HTML 全案长页。",
   "type": "module",
   "main": "./lib/skill-product-lab.mjs",
   "exports": {
@@ -27,21 +27,38 @@
     "skill-package-manifest.json"
   ],
   "keywords": [
-    "claude-code",
-    "claude-skill",
     "fmode",
+    "hermes",
+    "harness-loop",
+    "rsi",
+    "ai-agent",
+    "agent-skill",
+    "super-skill",
+    "esm",
+    "future-feima",
     "product",
     "innovation",
     "rd",
     "health",
     "food",
     "beverage",
-    "supplement"
+    "supplement",
+    "voc",
+    "kano",
+    "未来飞马",
+    "智能体技能",
+    "超级技能",
+    "新品研发",
+    "产品创新",
+    "健康快消",
+    "配方设计",
+    "AI交付物"
   ],
+  "author": "Yuyang001 (FmodeAgent)",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fmodecn/skill-product-lab.git"
+    "url": "git+ssh://git@github.com/fmodecn/skill-product-lab.git"
   },
   "homepage": "https://github.com/fmodecn/skill-product-lab#readme",
   "bugs": {
